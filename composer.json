@@ -1,0 +1,30 @@
+{
+    "name": "roxanne/laravel-base",
+    "authors": [
+        {
+            "name": "lhx",
+            "email": "1490911423@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Roxanne\\LaravelBase\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Roxanne\\LaravelBase\\LaravelBaseProvider"
+            ],
+            "aliases": {
+                "ExceptionFactory": "Roxanne\\LaravelBase\\Common\\Exception\\ExceptionFactoryFacade",
+            }
+        }
+    }
+}
