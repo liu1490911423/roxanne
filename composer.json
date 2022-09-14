@@ -23,7 +23,7 @@
                 "Roxanne\\LaravelBase\\LaravelBaseProvider"
             ],
             "aliases": {
-                "ExceptionFactory": "Roxanne\\LaravelBase\\Common\\Exception\\ExceptionFactoryFacade",
+                "ExceptionFactory": "Roxanne\\LaravelBase\\Common\\Exception\\ExceptionFactoryFacade"
             }
         }
     }
