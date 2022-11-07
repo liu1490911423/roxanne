@@ -47,6 +47,8 @@ class StandardizeResponse
             $data['total'] = $content['total'];
         } else if (is_array($content) && isset($content['code']) && $content['code'] == 422) {   //判断是否是参数错误
             return $response;
+        } else if (is_array($content) && isset($content['code']) && $content['code'] != 200) {   //判断是否异常
+            return $response;
         } else if (is_array($content) && isset($content['type']) && $content['type'] == 'business') { //判断是否业务返回错误
             unset($content['type']);
             return response()->json($content);
