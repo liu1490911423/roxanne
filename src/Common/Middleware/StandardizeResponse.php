@@ -35,6 +35,8 @@ class StandardizeResponse
             return $response;
         }
         $content = $response->getOriginalContent();
+        $headers = $response->headers;
+
         if ($response->status() < 200 || $response->status() >= 300) {
             return $response;
         }
@@ -76,7 +78,7 @@ class StandardizeResponse
             $jsonData = array_merge($this->options, $this->message, $result);
         }
 
-        return response()->json($jsonData, 200);
+        return response()->json($jsonData, 200)->withHeaders($headers);;
 
     }
 }
